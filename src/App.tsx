@@ -1,91 +1,50 @@
 import './App.css'
-import bannerImg from './assets/banner.png';
+
 function App() {
     return (
-    <>
-        <main className="blog-posts">
-            <article className="blog-posts__post">
-                <div className="blog-posts__post--media">
-                    <img loading="lazy" src={bannerImg}
-                         className="blog-posts__post--img" alt="presentation"
-                    />
-                </div>
+        <>
+            <main className="signin-page">
+                <section className="signin">
+                    <header className="signin__header">
+                        <h1 className="signin__header--title">Evolutive Learning</h1>
+                    </header>
+                    <form className="signin__form">
+                        <div className="signin__form-field">
+                            <input className="signin__form-field--input" type="email" placeholder="Email"/>
+                            <input className="signin__form-field--input" type="password" placeholder="Password"/>
+                        </div>
+                        <div className="signin__form-button">
+                            <input className="signin__form-button--submit" type="submit" />
+                        </div>
+                    </form>
 
-                <div className="blog-posts__post--create">
-                    <p className="blog-posts__post--date">
-                        {(() => {
-                            const date = new Date();
-                            date.setMonth(date.getMonth() - 2);
-                            return date.toLocaleDateString()
-                        })()}
-                    </p>
-                </div>
+                    <div className="signin__divider">
+                        <p className="signin__divider-text">Or connect with</p>
+                    </div>
 
+                    <ul className="signin__social-list">
+                        <li className="signin__social-item">
+                            <a className="signin__social-link" href="#">Facebook</a>
+                        </li>
+                        <li className="signin__social-item">
+                            <a className="signin__social-link" href="#">Twitter</a>
+                        </li>
+                        <li className="signin__social-item">
+                            <a className="signin__social-link" href="#">Google</a>
+                        </li>
+                    </ul>
 
-                <h2 className="blog-posts__post--title">
-                    Meet AutoManage, the best AI management tools
-                </h2>
-
-                <p className="blog-posts__post--description">
-                    Lorem, ipsum dolor sit amet consectetur adipiscing elit,
-                    sed do Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-            </article>
-
-            <article className="blog-posts__post">
-                <div className="blog-posts__post--media">
-                    <img loading="lazy" src={bannerImg}
-                         className="blog-posts__post--img" alt="presentation"
-                    />
-                </div>
-                <div className="blog-posts__post--create">
-                    <p className="blog-posts__post--date">
-                        {(() => {
-                            const date = new Date();
-                            date.setMonth(date.getMonth() - 4);
-                            return date.toLocaleDateString()
-                        })()}
-                    </p>
-                </div>
-                <h2 className="blog-posts__post--title">
-                    Meet AutoManage, the best AI management tools
-                </h2>
-
-                <p className="blog-posts__post--description">
-                    Lorem, ipsum dolor sit amet consectetur adipiscing elit,
-                    sed do Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-            </article>
-
-            <article className="blog-posts__post">
-                <div className="blog-posts__post--media">
-                    <img loading="lazy" src={bannerImg}
-                         className="blog-posts__post--img" alt="presentation"
-                    />
-                </div>
-                <div className="blog-posts__post--create">
-                    <p className="blog-posts__post--date">
-                        {(() => {
-                            const date = new Date();
-                            date.setMonth(date.getMonth() - 6);
-                            return date.toLocaleDateString()
-                        })()}
-                    </p>
-                </div>
-
-                <h2 className="blog-posts__post--title">
-                    Meet AutoManage, the best AI management tools
-                </h2>
-
-                <p className="blog-posts__post--description">
-                    Lorem, ipsum dolor sit amet consectetur adipiscing elit,
-                    sed do Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-            </article>
-            
-        </main>
-    </>
-  )
+                    <div className="signin__signup">
+                        <a className="signin__signup-link" href="#">Forgot Password</a>
+                        <p className="signin__signup-text">
+                            Not a member yet?
+                            <a className="signin__signup-text--link" href="#">Sign Up</a>
+                        </p>
+                    </div>
+                </section>
+            </main>
+        </>
+    )
 }
 
 export default App
